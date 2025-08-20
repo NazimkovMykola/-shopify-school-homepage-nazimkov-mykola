@@ -1,0 +1,37 @@
+@use "sass:list";
+@use "sass:map";
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+// FONTS
+
+$typography-styles: (
+  h1-desktop: (48px, 48px, 700),
+  h1-mobile: (30px, 36px, 700),
+  h2-desktop: (30px, 36px, 400),
+  h2-mobile: (24px, 32px, 400),
+  body-text-large: (16px, 24px, 400),
+  body-text-medium: (14px, 20px, 400)
+);
+
+@mixin typography-style($style-name) {
+  $style: map.get($typography-styles, $style-name);
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-size: list.nth($style, 1);
+  line-height: list.nth($style, 2);
+  font-weight: list.nth($style, 3);
+}
+
+// BUTTONS
+@mixin button($bg-color,$text-color) {
+@include typography-style(body-text-large);
+padding: 16px 32px;
+border-radius: 8px;
+background-color: $bg-color;
+color: $text-color;
+}

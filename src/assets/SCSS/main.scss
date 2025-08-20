@@ -1,0 +1,11 @@
+@use 'mixins/mixins' as *;
+@use 'sections/header';
+@use 'sections/hero_banner';
+@use "sections/collections";
+@use 'sections/faq';
+@use 'sections/product';
+@use 'sections/main_page_form';
+
+* {
+    @include reset-list;
+}
