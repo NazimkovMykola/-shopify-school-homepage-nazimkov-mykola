@@ -5,6 +5,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shopify Test Page</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <meta property="og:title" content="Nike. Just Do It.">
+  <meta property="og:description"
+    content="Discover the latest Nike products for running, basketball, and more. Find the sportswear and sneakers that define your style.">
+  <meta property="og:url" content="https://www.nike.com/">
+  <meta property="og:site_name" content="Nike">
+  <meta property="og:type" content="website">
+
+  <meta property="og:image" content="https://www.nike.com/images/nike-social-share-image.jpg">
+  <meta property="og:image:alt" content="The Nike logo and the Just Do It slogan.">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@Nike">
+  <meta name="twitter:creator" content="@Nike">
+  <meta name="twitter:title" content="Nike. Just Do It.">
+  <meta name="twitter:description"
+    content="Discover the latest Nike products for running, basketball, and more. Find the sportswear and sneakers that define your style.">
+  <meta name="twitter:image" content="https://www.nike.com/images/nike-social-share-image.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
@@ -13,7 +35,7 @@
 
 <body>
   <header>
-    <a class="header__logo" href="/">
+    <a class="header__logo" href="/" aria-label="main logo">
       <svg width="100" height="24" viewBox="0 0 100 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_1_326)">
           <path
@@ -68,7 +90,7 @@
         <li><a href="#">Kids</a></li>
       </ul>
     </nav>
-    <a class="header__cart-icon" href="#">
+    <a class="header__cart-icon" href="#" aria-label="cart">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M3.55514 14.2572C2.83668 10.9043 2.47745 9.22793 3.378 8.11397C4.27855 7 5.99302 7 9.42196 7H14.5781C18.0071 7 19.7215 7 20.6221 8.11397C21.5226 9.22793 21.1634 10.9043 20.4449 14.2572L20.0164 16.2572C19.5294 18.5297 19.2859 19.666 18.4608 20.333C17.6357 21 16.4737 21 14.1495 21H9.85053C7.52639 21 6.36432 21 5.53925 20.333C4.71418 19.666 4.47069 18.5297 3.98372 16.2572L3.55514 14.2572Z"
@@ -88,21 +110,351 @@
           <div class="swiper-slide" style="background-image:url(/img/hero_banner/hb2.avif)"></div>
           <div class="swiper-slide" style="background-image:url(/img/hero_banner/hb3.avif)"></div>
         </div>
+        <div class="swiper-pagination rectangle"></div>
       </div>
 
       <div class="hero-banner__content">
-        <h1>Заголовок</h1>
-        <p>Подзаголовок или краткое описание.</p>
-        <a href="#" class="btn-more">More</a>
+        <h1>More than just shoes — <br>it’s a part of your<br>story.</h1>
+        <p>Original sneakers from Nike and other top brands that make every step<br>feel special.</p>
+        <a href="#collection" class="btn-more">Shop the Collection</a>
       </div>
     </section>
-    <section class="collection"></section>
-    <section class="faq">
+    <section id="collection" class="collection">
+      <h2>Featured Collection</h2>
+      <div class="swiper-container swiper-collection">
+        <div class="swiper-wrapper">
+          <a href="#" class="swiper-slide">
+            <img src="/img/collection/col4.avif" alt="Nike Streakfly 2" loading="lazy">
+            <h3>Nike Streakfly 2</h3>
+            <span>$300.00</span>
+          </a>
+          <a class="swiper-slide">
+            <img src="/img/collection/col1.avif" alt="Nike Pegasus Premium" loading="lazy">
+            <h3>Nike Pegasus Premium</h3>
+            <span>$350.00</span>
+          </a>
+          <a href="#" class="swiper-slide">
+            <img src="/img/collection/col2.avif" alt="Nike Pegasus 41" loading="lazy">
+            <h3>Nike Pegasus 41</h3>
+            <span>$280.00</span>
+          </a>
+          <a href="#" class="swiper-slide">
+            <img src="/img/collection/col3.avif" alt="Nike Revolution 7" loading="lazy">
+            <h3>Nike Revolution 7</h3>
+            <span>$440.00</span>
+          </a>
+          <a href="#" class="swiper-slide">
+            <img src="/img/collection/col5.avif" alt="Nike Air Max Plus" loading="lazy">
+            <h3>Nike Air Max Plus</h3>
+            <span>$280.00</span>
+          </a>
+        </div>
+        <div class="swiper-button-next">
+          <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M4.38329 4.85697L4.02974 5.21053L4.73684 5.91763L5.0904 5.56408L4.38329 4.85697ZM6.84211 3.10526L7.19566 3.45882L7.54921 3.10526L7.19566 2.75171L6.84211 3.10526ZM5.0904 0.646447L4.73684 0.292893L4.02974 1L4.38329 1.35355L5.0904 0.646447ZM4.73684 5.21053L5.0904 5.56408L7.19566 3.45882L6.84211 3.10526L6.48855 2.75171L4.38329 4.85697L4.73684 5.21053ZM6.84211 3.10526L7.19566 2.75171L5.0904 0.646447L4.73684 1L4.38329 1.35355L6.48855 3.45882L6.84211 3.10526ZM6.84211 3.10526V2.60526H0V3.10526V3.60526H6.84211V3.10526Z"
+              fill="#111111" />
+          </svg>
+
+        </div>
+      </div>
     </section>
-    <section class="product"></section>
-    <section class="main_page_form"></section>
+    <section class="faq">
+      <h2>Frequently asked questions</h2>
+      <p class="faq__subtitle">Answers to our most frequently asked questions are just one click away.</p>
+      <div class="faq__accordion">
+        <details>
+          <summary>What are Nike's delivery options?
+            <svg class="faq__accordion__plus" width="15" height="16" viewBox="0 0 15 16" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.5 4.5V11.5M4 8H11M7.5 15C3.63401 15 0.5 11.866 0.5 8C0.5 4.13401 3.63401 1 7.5 1C11.366 1 14.5 4.13401 14.5 8C14.5 11.866 11.366 15 7.5 15Z"
+                stroke="#111111" />
+            </svg>
+            <svg class="faq__accordion__minus" width="15" height="16" viewBox="0 0 15 16" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4 8H11M7.5 15C3.63401 15 0.5 11.866 0.5 8C0.5 4.13401 3.63401 1 7.5 1C11.366 1 14.5 4.13401 14.5 8C14.5 11.866 11.366 15 7.5 15Z"
+                stroke="#111111" />
+            </svg>
+          </summary>
+          <div class="accordion-content">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora dolorum quam exercitationem
+              voluptatibus temporibus sit, non voluptates necessitatibus quo iure dolor? Cupiditate quam fuga provident
+              voluptate architecto rem, nesciunt voluptatibus laboriosam suscipit corrupti deleniti libero, sequi
+              eligendi error incidunt omnis esse ullam aperiam fugiat quasi atque inventore perspiciatis dolores. Et!
+            </p>
+          </div>
+        </details>
+
+        <details open>
+          <summary>What is Nike's returns policy?
+            <svg class="faq__accordion__plus" width="15" height="16" viewBox="0 0 15 16" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.5 4.5V11.5M4 8H11M7.5 15C3.63401 15 0.5 11.866 0.5 8C0.5 4.13401 3.63401 1 7.5 1C11.366 1 14.5 4.13401 14.5 8C14.5 11.866 11.366 15 7.5 15Z"
+                stroke="#111111" />
+            </svg>
+            <svg class="faq__accordion__minus" width="15" height="16" viewBox="0 0 15 16" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4 8H11M7.5 15C3.63401 15 0.5 11.866 0.5 8C0.5 4.13401 3.63401 1 7.5 1C11.366 1 14.5 4.13401 14.5 8C14.5 11.866 11.366 15 7.5 15Z"
+                stroke="#111111" />
+            </svg>
+          </summary>
+          <div class="accordion-content">
+            <p>When you shop Nike online, either in the Nike App or on Nike.com, you can return items that are unworn
+              and unwashed and still have their product tags attached within 30 days of purchase (some exceptions
+              apply). That includes custom Nike By You sneakers.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Where is my Nike order?
+            <svg class="faq__accordion__plus" width="15" height="16" viewBox="0 0 15 16" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.5 4.5V11.5M4 8H11M7.5 15C3.63401 15 0.5 11.866 0.5 8C0.5 4.13401 3.63401 1 7.5 1C11.366 1 14.5 4.13401 14.5 8C14.5 11.866 11.366 15 7.5 15Z"
+                stroke="#111111" />
+            </svg>
+            <svg class="faq__accordion__minus" width="15" height="16" viewBox="0 0 15 16" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4 8H11M7.5 15C3.63401 15 0.5 11.866 0.5 8C0.5 4.13401 3.63401 1 7.5 1C11.366 1 14.5 4.13401 14.5 8C14.5 11.866 11.366 15 7.5 15Z"
+                stroke="#111111" />
+            </svg>
+          </summary>
+          <div class="accordion-content">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora dolorum quam exercitationem
+              voluptatibus temporibus sit, non voluptates necessitatibus quo iure dolor? Cupiditate quam fuga provident
+              voluptate architecto rem, nesciunt voluptatibus laboriosam suscipit corrupti deleniti libero, sequi
+              eligendi error incidunt omnis esse ullam aperiam fugiat quasi atque inventore perspiciatis dolores. Et!
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How do I find the right size and fit?
+            <svg class="faq__accordion__plus" width="15" height="16" viewBox="0 0 15 16" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.5 4.5V11.5M4 8H11M7.5 15C3.63401 15 0.5 11.866 0.5 8C0.5 4.13401 3.63401 1 7.5 1C11.366 1 14.5 4.13401 14.5 8C14.5 11.866 11.366 15 7.5 15Z"
+                stroke="#111111" />
+            </svg>
+            <svg class="faq__accordion__minus" width="15" height="16" viewBox="0 0 15 16" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4 8H11M7.5 15C3.63401 15 0.5 11.866 0.5 8C0.5 4.13401 3.63401 1 7.5 1C11.366 1 14.5 4.13401 14.5 8C14.5 11.866 11.366 15 7.5 15Z"
+                stroke="#111111" />
+            </svg>
+          </summary>
+          <div class="accordion-content">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora dolorum quam exercitationem
+              voluptatibus temporibus sit, non voluptates necessitatibus quo iure dolor? Cupiditate quam fuga provident
+              voluptate architecto rem, nesciunt voluptatibus laboriosam suscipit corrupti deleniti libero, sequi
+              eligendi error incidunt omnis esse ullam aperiam fugiat quasi atque inventore perspiciatis dolores. Et!
+            </p>
+          </div>
+        </details>
+      </div>
+    </section>
+    <section class="product">
+      <div class="product__viewer">
+        <div class="product__viewer__thumbs">
+          <img src="/img/product/w1.avif" alt="Nike Air Max Plus" loading="lazy">
+          <img src="/img/product/w2.avif" alt="Nike Air Max Plus" loading="lazy">
+          <img src="/img/product/w3.avif" alt="Nike Air Max Plus" loading="lazy">
+          <img src="/img/product/w4.avif" alt="Nike Air Max Plus" loading="lazy">
+          <img src="/img/product/w5.avif" alt="Nike Air Max Plus" loading="lazy">
+        </div>
+        <div class="product__viewer__main-img-wrapper">
+          <div class="product__viewer__main-img-wrapper__overlay">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M5.99999 9.07213L3.11569 10.6666L3.66666 7.28949L1.33333 4.89805L4.55784 4.40571L5.99999 1.33325L7.44215 4.40571L10.6667 4.89805L8.33333 7.28949L8.8843 10.6666L5.99999 9.07213Z"
+                fill="#111111" stroke="#111111" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>Highly Rated</span>
+          </div>
+          <img class="product__viewer__main-img" src="/img/product/w1.avif" alt="Nike Air Max Plus" loading="lazy">
+        </div>
+      </div>
+      <div class="product__details">
+        <h2>Nike Air Max Plus</h2>
+        <span class="product__details__subtitle">$280.00</span>
+        <div class="product__details__select-color">
+          <button class="product__details__select-color--active" id="white" aria-label="select white color">
+            <img src="/img/product/white.avif" alt="white"></button>
+          <button id="black" aria-label="select black color"><img src="/img/product/black.avif" alt="black"></button>
+          <button id="pink" aria-label="select pink color"><img src="/img/product/pink.avif" alt="pink"></button>
+        </div>
+        <div class="product__details__select-size">
+          <span>Select Size:</span>
+          <div>
+            <button aria-label="select size">UK 5.5</button>
+            <button aria-label="select size">UK 6 (EU 39)</button>
+            <button aria-label="select size">UK 6 (EU 40)</button>
+            <button aria-label="select size">UK 6.5</button>
+            <button aria-label="select size">UK 7</button>
+            <button aria-label="select size">UK 7.5</button>
+          </div>
+        </div>
+        <form method="post" action="/cart/add" id="product_form_8893925032281">
+          <input type="hidden" name="id" value="55634075124057">
+          <input type="hidden" name="quantity" value="1">
+          <button>Add To Bag</button>
+        </form>
+        <p>Let your attitude have the edge in your Nike Air Max Plus, a Tuned Air experience that offers premium
+          stability and unbelievable cushioning.</p>
+      </div>
+    </section>
+    <section class="main-page-form">
+      <h2>Need help?</h2>
+      <form action="/">
+        <div>
+          <label>
+            Name
+            <input placeholder="Enter name" id="name" name="name" type="text" required>
+          </label>
+          <label>
+            Number
+            <input placeholder="Enter Number" id="number" name="number" type="text" required>
+          </label>
+        </div>
+        <label>
+          Email
+          <input placeholder="Enter Email" id="email" name="email" type="email" required>
+        </label>
+        <label>
+          Message
+          <textarea placeholder="Enter Message" name="message" id="message" rows="10" required></textarea>
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
   </main>
-  <footer></footer>
+  <footer>
+    <div class="footer__grid">
+      <div>
+        <span>Resources</span>
+        <nav>
+          <ul>
+            <li>
+              <a href="#">Find a Store</a>
+            </li>
+            <li>
+              <a href="#">Nike Journal</a>
+            </li>
+            <li>
+              <a href="#">Become a Member</a>
+            </li>
+            <li>
+              <a href="#">Feedback</a>
+            </li>
+            <li>
+              <a href="#">Promo Codes</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div>
+        <span>Help</span>
+        <nav>
+          <ul>
+            <li>
+              <a href="#">Get Help</a>
+            </li>
+            <li>
+              <a href="#">Order Status</a>
+            </li>
+            <li>
+              <a href="#">Shipping and Delivery</a>
+            </li>
+            <li>
+              <a href="#">Returns</a>
+            </li>
+            <li>
+              <a href="#">Payment Options</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+        <span>Company</span>
+        <nav>
+          <ul>
+            <li>
+              <a href="/">About Nike</a>
+            </li>
+            <li>
+              <a href="/">News</a>
+            </li>
+            <li>
+              <a href="">Careers</a>
+            </li>
+            <li>
+              <a href="/">Investors</a>
+            </li>
+            <li>
+              <a href="/">Sustainability</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div>
+        <span>Menu</span>
+        <nav>
+          <ul>
+            <li>
+              <a href="/">New & Featured</a>
+            </li>
+            <li>
+              <a href="/">Men</a>
+            </li>
+            <li>
+              <a href="/">Women</a>
+            </li>
+            <li>
+              <a href="/">Kids</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="footer__year-wrapper">
+      <span>© 2025 Stellar Soft</span>
+      <nav>
+        <ul>
+          <li><a href="/">Terms of Use</a></li>
+          <li><a href="/">Privacy & Cookie Policy</a></li>
+          <li><a href="/">Privacy & Cookie Setting</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  <dialog id="dialog">
+    <button id="close-dialog-btn">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19.4737" fill="white" stroke="#EBEBEB" stroke-width="1.05263" />
+        <path d="M13.6001 13.6L26.4001 26.4M13.6001 26.4L26.4001 13.6" stroke="#111111" />
+      </svg>
+
+    </button>
+    <div>
+      <h2>Here’s $10 Off<br> Your First<br> Order!</h2>
+      <p>Join our newsletter and get a $10 discount code sent straight to your inbox. New customers only.</p>
+      <form action="/">
+        <label>
+          Email
+          <input placeholder="Enter Email" id="dialog-email" name="email" type="email" required>
+        </label>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+    <img src="/img/dialog/dialog.avif" alt="nike wear">
+  </dialog>
   <script type="module" src="/src/main.js"></script>
 </body>
 

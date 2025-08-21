@@ -1,0 +1,55 @@
+@use "../variables/variables";
+@use "../mixins/mixins";
+
+footer {
+  padding: 60px 5% 24px 5%;
+  .footer__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-bottom: 3rem;
+    div {
+      @include mixins.flex(flex-start, flex-start, column);
+      ul {
+        @include mixins.flex(flex-start, flex-start, column);
+        li {
+          &:not(:last-child) {
+            margin-bottom: 1.1rem;
+          }
+        }
+      }
+      span {
+        @include mixins.typography-style("body-text-large");
+        color: variables.$main-color;
+        margin-bottom: 1rem;
+      }
+      a {
+        @include mixins.typography-style("body-text-medium");
+        color: variables.$grey;
+        &:hover {
+            text-decoration: underline;
+        }
+      }
+    }
+  }
+  .footer__year-wrapper {
+    @include mixins.flex(flex-start);
+    span {
+      margin-right: 2rem;
+      @include mixins.typography-style("body-text-medium");
+      color: variables.$grey;
+    }
+    ul {
+      @include mixins.flex();
+      li:not(:last-child) {
+        margin-right: 2rem;
+      }
+      a {
+        @include mixins.typography-style("body-text-medium");
+        color: variables.$grey;
+        &:hover {
+            text-decoration: underline;
+        }
+      }
+    }
+  }
+}

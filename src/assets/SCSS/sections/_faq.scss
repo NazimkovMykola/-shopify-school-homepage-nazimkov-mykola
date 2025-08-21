@@ -1,0 +1,54 @@
+@use "../variables/variables";
+@use "../mixins/mixins";
+
+.faq {
+ @include mixins.flex(center, center,column);
+  padding: 80px 5%;
+  background-color: variables.$section-bg;
+  h2 {
+    @include mixins.typography-style("h2-desktop");
+    margin-bottom: 1rem;
+    color: variables.$main-color;
+  }
+  .faq__subtitle {
+    @include mixins.typography-style("body-text-large");
+    margin-bottom: 3rem;
+    color: variables.$grey;
+  }
+  .faq__accordion {
+    width: 100%;
+    max-width: 872px;
+    details {
+      background-color: variables.$white-color;
+      width: 100%;
+      display: block;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+    }
+    .faq__accordion__minus {
+      display: none;
+    }
+    details[open] summary {
+      margin-bottom: 1.5rem;
+      .faq__accordion__plus {
+        display: none;
+      }
+      .faq__accordion__minus {
+        display: block;
+      }
+    }
+    summary {
+      @include mixins.typography-style("body-text-large");
+      color: variables.$main-color;
+      cursor: pointer;
+      @include mixins.flex(space-between);
+    }
+    .accordion-content p {
+      @include mixins.typography-style("body-text-large");
+      color: variables.$grey;
+    }
+  }
+}

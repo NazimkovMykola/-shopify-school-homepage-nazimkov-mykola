@@ -6,6 +6,7 @@
   padding: 0;
   list-style: none;
   box-sizing: border-box;
+  text-decoration: none;
 }
 // FONTS
 
@@ -34,4 +35,13 @@ padding: 16px 32px;
 border-radius: 8px;
 background-color: $bg-color;
 color: $text-color;
+text-decoration: none;
+}
+
+//FLEX 
+@mixin flex($jc:center,$ai:center,$fd:row) {
+display: flex;
+justify-content: $jc;
+align-items: $ai;
+flex-direction: $fd;
 }

@@ -1,0 +1,41 @@
+@use "../variables/variables";
+@use "../mixins/mixins";
+.collection {
+  padding: 80px 5%;
+  overflow: hidden;
+  h2 {
+    @include mixins.typography-style("h2-desktop");
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .swiper-collection {
+    position: relative;
+    img {
+      margin-bottom: 1rem;
+      border-radius: 0.375rem;
+    }
+    h3 {
+      @include mixins.typography-style("body-text-large");
+      color: variables.$main-color;
+      margin-bottom: 0.5rem;
+    }
+    span {
+      @include mixins.typography-style("body-text-large");
+      color: variables.$grey;
+    }
+    .swiper-button-next {
+      position: absolute;
+      top: 40%;
+      right: 100px;
+      z-index: 10;
+      cursor: pointer;
+      @include mixins.flex();
+      width: 40px;
+      height: 40px;
+      margin-top: -22px;
+      background-color: variables.$white-color;
+      border: 1px solid variables.$stroke;
+      border-radius: 50%;
+    }
+  }
+}

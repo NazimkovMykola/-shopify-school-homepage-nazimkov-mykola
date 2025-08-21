@@ -5,7 +5,10 @@
 @use 'sections/faq';
 @use 'sections/product';
 @use 'sections/main_page_form';
+@use 'sections/footer';
+@use 'sections/dialog';
 
 * {
     @include reset-list;
+    transition: all .6s;
 }
