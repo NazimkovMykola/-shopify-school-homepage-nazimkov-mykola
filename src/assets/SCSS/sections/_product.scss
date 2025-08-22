@@ -138,6 +138,16 @@
     color: variables.$grey;
   }
 
+  @media screen and (min-width: 768px) and (max-width: 949px) {
+    .product__details__select-size {
+      div {
+        button {
+          @include mixins.typography-style("body-text-medium");
+        }
+      }
+    }
+  }
+
   @media screen and (max-width: 767px) {
     & {
       padding: 60px 5%;
@@ -172,9 +182,9 @@
           height: auto;
           aspect-ratio: 1 / 1;
           min-height: auto;
-          object-fit: cover; 
+          object-fit: cover;
         }
-         img:not(:last-child){
+        img:not(:last-child) {
           margin-bottom: 0;
         }
       }
