@@ -66,4 +66,25 @@
       transform: translateY(-3px);
     }
   }
+  @media screen and (max-width: 767px) {
+    & {
+      padding: 0 5%;
+      @include mixins.flex(center, center);
+      height: calc(100vh - 60px);
+    }
+    .hero-banner__content {
+      @include mixins.flex(center, center, column);
+      h1 {
+        @include mixins.typography-style("h1-mobile");
+        text-align: center;
+        max-width: 347px;
+        br {
+          display: none;
+        }
+      }
+      p {
+        text-align: center;
+      }
+    }
+  }
 }

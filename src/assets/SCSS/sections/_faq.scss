@@ -2,7 +2,7 @@
 @use "../mixins/mixins";
 
 .faq {
- @include mixins.flex(center, center,column);
+  @include mixins.flex(center, center, column);
   padding: 80px 5%;
   background-color: variables.$section-bg;
   h2 {
@@ -49,6 +49,19 @@
     .accordion-content p {
       @include mixins.typography-style("body-text-large");
       color: variables.$grey;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    & {
+      padding: 60px 5%;
+    }
+    h2 {
+      @include mixins.typography-style("h2-mobile");
+    }
+    .faq__subtitle {
+      margin-bottom: 2rem;
+      text-align: center;
+      padding: 0 5%;
     }
   }
 }

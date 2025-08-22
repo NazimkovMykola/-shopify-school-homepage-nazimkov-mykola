@@ -27,7 +27,7 @@
       position: relative;
       .product__viewer__main-img-wrapper__overlay {
         position: absolute;
-        top:16px;
+        top: 16px;
         left: 16px;
         background-color: variables.$white-color;
         border-radius: 4px;
@@ -69,9 +69,9 @@
       cursor: pointer;
       border: 1px solid transparent;
       img {
-       max-width: 100%;
-       height: auto;
-       border-radius: 8px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
       }
       &:not(:last-child) {
         margin-right: 0.5rem;
@@ -108,7 +108,7 @@
         &:hover {
           background-color: variables.$stroke;
         }
-        &:nth-child(2){
+        &:nth-child(2) {
           border: 1px solid variables.$main-color;
         }
       }
@@ -132,5 +132,48 @@
   p {
     @include mixins.typography-style("body-text-medium");
     color: variables.$grey;
+  }
+
+  @media screen and (max-width: 767px) {
+    & {
+      padding: 60px 5%;
+      grid-template-columns: 1fr;
+      h2 {
+        @include mixins.typography-style("h2-mobile");
+        margin-bottom: 0.75rem;
+      }
+      .product__details__subtitle {
+        margin-bottom: 1.5rem;
+      }
+    }
+    .product__viewer {
+      @include mixins.flex(center, center, column-reverse);
+      .product__viewer__thumbs {
+        @include mixins.flex();
+        margin-right: 0;
+        img:not(:last-child) {
+          margin-bottom: 0;
+          margin-right: 1rem;
+        }
+      }
+      .product__viewer__main-img-wrapper {
+        img {
+          width: 343px;
+          max-height: 343px;
+        }
+      }
+    }
+    .product__details__select-color {
+      margin-bottom: 1.5rem;
+    }
+    .product__details__select-size {
+      margin-bottom: 1.5rem;
+      div {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .form {
+      margin-bottom: 1.5rem;
+    }
   }
 }

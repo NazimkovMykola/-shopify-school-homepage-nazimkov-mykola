@@ -18,7 +18,8 @@ const swiperHero = new Swiper(".swiper-bg", {
 const swiperCollection = new Swiper(".swiper-collection", {
   modules: [Autoplay, Navigation],
   ...commonSliderSettings,
-  slidesPerView: 4,
+  slidesPerView: window.innerWidth > 768 ? 4 : 1,
+  centeredSlides: window.innerWidth > 768 ? false : true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: null,

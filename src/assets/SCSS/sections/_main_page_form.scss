@@ -2,66 +2,87 @@
 @use "../mixins/mixins";
 
 .main-page-form {
-    padding: 80px 20%;
-    background-color: variables.$section-bg;
-    @include mixins.flex(center, center, column);
-    h2 {
+  padding: 80px 20%;
+  background-color: variables.$section-bg;
+  @include mixins.flex(center, center, column);
+  h2 {
     @include mixins.typography-style("h2-desktop");
     margin-bottom: 3rem;
+  }
+  form {
+    @include mixins.flex(center, center, column);
+    width: 100%;
+    max-width: 872px;
+    div {
+      @include mixins.flex(space-between, center);
+      margin-bottom: 1.5rem;
+      width: 100%;
+      label {
+        margin-bottom: 0 !important;
+      }
+      label:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+    }
+    label {
+      width: 100%;
+      @include mixins.flex(center, flex-start, column);
+      gap: 0.5rem;
+      @include mixins.typography-style("body-text-large");
+      color: variables.$main-color;
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+    input {
+      border: none;
+      padding: 1rem;
+      border-radius: 8px;
+      width: 100%;
+      &::placeholder {
+        @include mixins.typography-style("body-text-large");
+        color: variables.$grey;
+      }
+    }
+    textarea {
+      width: 100%;
+      resize: none;
+      border: none;
+      border-radius: 8px;
+      padding: 0.5rem;
+      &::placeholder {
+        @include mixins.typography-style("body-text-large");
+        color: variables.$grey;
+      }
+    }
+    button {
+      @include mixins.button(variables.$main-color, variables.$white-color);
+      cursor: pointer;
+      margin-top: 0.5rem;
+      &:hover {
+        transform: translateY(-3px);
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    & {
+      padding: 60px 5%;
+    }
+    h2 {
+      @include mixins.typography-style("h2-mobile");
+      margin-bottom: 2rem;
     }
     form {
-        @include mixins.flex(center, center, column);
-        width: 100%;
-        max-width: 872px;
-        div {
-            @include mixins.flex(space-between, center);
-            margin-bottom: 1.75rem;
-            width: 100%;
-            label {
-                margin-bottom: 0 !important;
-            }
-            label:not(:last-child) {
-                margin-right: 1.75rem;
-            }
+      div {
+        @include mixins.flex(center, space-between, column);
+        label:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 1.5rem !important;
         }
-        label {
-            width: 100%;
-            @include mixins.flex(center, flex-start, column);
-            gap: 0.5rem;
-            @include mixins.typography-style("body-text-large");
-            color: variables.$main-color;
-            &:not(:last-child) {
-                margin-bottom: 1.75rem;
-            }
-        }
-        input {
-            border: none;
-            padding: 1rem;
-            border-radius: 8px;
-            width: 100%;
-            &::placeholder {
-                @include mixins.typography-style("body-text-large");
-            color: variables.$grey;
-            }
-
-        }
-        textarea {
-            width: 100%;
-            resize: none;
-            border: none;
-            border-radius: 8px;
-            padding: 0.5rem;
-         &::placeholder {
-                @include mixins.typography-style("body-text-large");
-            color: variables.$grey;
-            }   
-        }
-        button {
-            @include mixins.button(variables.$main-color, variables.$white-color);
-            cursor: pointer;
-            &:hover {
-                transform: translateY(-3px);
-            }
-        }
+      }
+      button {
+        margin-top: 0;
+      }
     }
+  }
 }

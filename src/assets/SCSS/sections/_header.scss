@@ -4,6 +4,10 @@ header {
   @include mixins.flex(space-between);
   background-color: variables.$white-color;
   padding: 30px 5%;
+  .header__burger {
+    border: none;
+    display: none;
+  }
   nav ul {
     display: flex;
     li {
@@ -23,6 +27,18 @@ header {
   .header__cart-icon {
     &:hover {
       transform: translateY(-3px);
+    }
+  }
+  @media screen and (max-width: 767px) {
+    & {
+      padding: 16px 5%;
+    }
+    .header__burger {
+      display: block;
+    }
+    nav,
+    .header__logo {
+      display: none;
     }
   }
 }

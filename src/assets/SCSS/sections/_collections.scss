@@ -38,4 +38,18 @@
       border-radius: 50%;
     }
   }
+  @media screen and (max-width: 767px) {
+    & {
+      padding: 60px 5%;
+    }
+    h2 {
+      @include mixins.typography-style("h2-mobile");
+      margin-bottom: 2rem;
+    }
+    .swiper-collection {
+      .swiper-button-next {
+        display: none;
+      }
+    }
+  }
 }
