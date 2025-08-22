@@ -18,9 +18,18 @@
   }
 
   .swiper-bg .swiper-slide {
-    background-position: center;
+    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    &:nth-child(1) {
+      background-image: url("/img/hero_banner/hb1.avif");
+    }
+    &:nth-child(2) {
+      background-image: url("/img/hero_banner/hb2.avif");
+    }
+    &:nth-child(3) {
+      background-image: url("/img/hero_banner/hb3.avif");
+    }
   }
 
   .swiper-pagination {
@@ -71,6 +80,17 @@
       padding: 0 5%;
       @include mixins.flex(center, center);
       height: calc(100vh - 60px);
+    }
+    .swiper-bg .swiper-slide {
+      &:nth-child(1) {
+        background-image: url("/img/hero_banner/hb1-768.avif");
+      }
+      &:nth-child(2) {
+        background-image: url("/img/hero_banner/hb2-768.avif");
+      }
+      &:nth-child(3) {
+        background-image: url("/img/hero_banner/hb3-768.avif");
+      }
     }
     .hero-banner__content {
       @include mixins.flex(center, center, column);

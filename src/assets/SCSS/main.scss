@@ -11,4 +11,5 @@
 * {
     @include reset-list;
     transition: all .6s;
+    scroll-behavior: smooth;
 }

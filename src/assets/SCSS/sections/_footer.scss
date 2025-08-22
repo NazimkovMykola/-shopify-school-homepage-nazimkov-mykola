@@ -51,10 +51,10 @@ footer {
         }
       }
     }
-    .footer__accordion {
+  }
+   .footer__accordion {
       display: none;
     }
-  }
   @media screen and (max-width: 767px) {
     .footer__grid {
       display: none;
@@ -74,6 +74,7 @@ footer {
       }
     }
     .footer__accordion {
+      display: block;
       margin-bottom: 3rem;
       details[open] {
         summary {

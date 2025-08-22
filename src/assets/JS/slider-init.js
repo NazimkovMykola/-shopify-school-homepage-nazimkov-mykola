@@ -24,10 +24,4 @@ export function sliderInit() {
       prevEl: null,
     },
   });
-
-  // const swiperThumbs = new Swiper(".swiper-thumbs", {
-  //   modules: [Autoplay],
-  //   ...commonSliderSettings,
-  //   slidesPerView: 3,
-  // });
 }
