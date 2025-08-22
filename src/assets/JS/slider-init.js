@@ -14,10 +14,17 @@ export function sliderInit() {
     },
   });
 
+  let sliderQuantity = 4;
+  if (window.innerWidth < 768) {
+    sliderQuantity = 1;
+  } else if (window.innerWidth > 768 && window.innerWidth < 1280) {
+    sliderQuantity = 2;
+  }
+
   const swiperCollection = new Swiper(".swiper-collection", {
     modules: [Autoplay, Navigation],
     ...commonSliderSettings,
-    slidesPerView: window.innerWidth > 768 ? 4 : 1,
+    slidesPerView: sliderQuantity,
     centeredSlides: window.innerWidth > 768 ? false : true,
     navigation: {
       nextEl: ".swiper-button-next",

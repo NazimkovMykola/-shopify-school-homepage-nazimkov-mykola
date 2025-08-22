@@ -20,6 +20,7 @@ export function setDialog() {
       const btnFormSubmit = dialog.querySelector('button[type="submit"]');
       if (btnFormSubmit) {
         btnFormSubmit.addEventListener("click", () => {
+          
           setLocaleStorageDialog();
         });
       }
