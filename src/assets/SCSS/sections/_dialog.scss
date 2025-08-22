@@ -19,44 +19,44 @@ dialog {
     @include mixins.typography-style("h1-desktop");
     color: variables.$main-color;
     margin-bottom: 1rem;
+    text-transform: uppercase;
   }
   p {
-   @include mixins.typography-style("body-text-large");
+    @include mixins.typography-style("body-text-large");
     color: variables.$grey;
-    margin-bottom: 3rem; 
+    margin-bottom: 3rem;
   }
   div {
     padding: 60px;
     form {
       label {
-            width: 100%;
-            @include mixins.flex(center, flex-start, column);
-            gap: 0.5rem;
-            @include mixins.typography-style("body-text-large");
-            color: variables.$main-color;
-            &:not(:last-child) {
-                margin-bottom: 1.75rem;
-            }
+        width: 100%;
+        @include mixins.flex(center, flex-start, column);
+        gap: 0.5rem;
+        @include mixins.typography-style("body-text-large");
+        color: variables.$main-color;
+        &:not(:last-child) {
+          margin-bottom: 1.75rem;
         }
-        input {
-            border: 1px solid variables.$stroke;
-            padding: 1rem;
-            border-radius: 8px;
-            width: 100%;
-            &::placeholder {
-                @include mixins.typography-style("body-text-large");
-            color: variables.$grey;
-            }
-
+      }
+      input {
+        border: 1px solid variables.$stroke;
+        padding: 1rem;
+        border-radius: 8px;
+        width: 100%;
+        &::placeholder {
+          @include mixins.typography-style("body-text-large");
+          color: variables.$grey;
         }
-          button {
-            width: 100%;
-            @include mixins.button(variables.$main-color, variables.$white-color);
-            cursor: pointer;
-            &:hover {
-                transform: translateY(-3px);
-            }
+      }
+      button {
+        width: 100%;
+        @include mixins.button(variables.$main-color, variables.$white-color);
+        cursor: pointer;
+        &:hover {
+          transform: translateY(-3px);
         }
+      }
     }
   }
   img {
@@ -76,7 +76,27 @@ dialog {
     font-size: 1.5rem;
     cursor: pointer;
   }
+  @media screen and (max-width: 767px) {
+    & {
+      width: 359px;
+      height: 488px;
+    }
+    div {
+      padding: 1rem;
+    }
+    h2 {
+      @include mixins.typography-style("h1-mobile");
+      margin-bottom: 1rem;
+      br {
+        display: none;
+      }
+    }
+    img {
+      display: none;
+    }
+  }
 }
+
 .no-scroll {
-    overflow: hidden;
+  overflow: hidden;
 }
