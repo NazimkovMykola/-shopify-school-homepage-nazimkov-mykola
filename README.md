@@ -30,7 +30,9 @@ pnpm start
 
 *recommended Node.js version - 20.19.0 or hight*
 
-You can find out your current Node.js version with the command ```node -v````
+You can find out your current Node.js version with the command ```javascript
+node -v
+```
 
 3. Open page in browser
 
