@@ -28,6 +28,10 @@ yarn start
 pnpm start
 ```
 
+*recommended Node.js version - 20.19.0 or hight*
+
+You can find out your current Node.js version with the command ```node -v````
+
 3. Open page in browser
 
 http://localhost:5173 - open this link in browser
@@ -47,7 +51,7 @@ https://vite.dev/
 
 ## Suggestions for Project Improvements
 
-1. To improve website performance, but now - 93% not bad. 
+1. To improve website performance, but now, 93% not a bad value.
 
    https://pagespeed.web.dev/analysis/https-shopify-school-homepage-nazimkov-mykola-onrender-com/dlpg3xlt8x?form_factor=mobile
 
@@ -56,3 +60,5 @@ https://vite.dev/
 And also he HTML markup is fully valid and has been validated using the "W3C validator" tool - https://validator.w3.org/nu/?doc=https%3A%2F%2Fshopify-school-homepage-nazimkov-mykola.onrender.com%2F
 
 2. Implement a slider for image previews instead of a static block. I couldn't do it due to conflicts in slider initialization.
+
+3. Analyze styles and get rid of repetitions in styles - move them to mixins or variables

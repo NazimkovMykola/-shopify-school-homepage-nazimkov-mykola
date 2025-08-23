@@ -1,4 +1,4 @@
-export const commonSliderSettings = {
+export const COMMON_SLIDER_SETTINGS = {
   direction: "horizontal",
   loop: true,
   speed: 1000,
@@ -12,8 +12,12 @@ export const commonSliderSettings = {
   },
 };
 
-export const colors = {
+export const COLORS = {
   white: "w",
   black: "b",
   pink: "p",
 };
+
+export const ACTIVE_FILTER_STYLE = "brightness(0.7)";
+export const ACTIVE_BORDER_COLOR = "black";
+export const NOT_ACTIVE_BORDER_COLOR = "#EBEBEB";

@@ -1,11 +1,11 @@
-import { commonSliderSettings } from "./variables.js";
+import { COMMON_SLIDER_SETTINGS } from "./variables.js";
 import Swiper from "swiper";
 import { Pagination, Autoplay, Navigation } from "swiper/modules";
 
 export function sliderInit() {
   const swiperHero = new Swiper(".swiper-bg", {
     modules: [Pagination, Autoplay],
-    ...commonSliderSettings,
+    ...COMMON_SLIDER_SETTINGS,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -23,7 +23,7 @@ export function sliderInit() {
 
   const swiperCollection = new Swiper(".swiper-collection", {
     modules: [Autoplay, Navigation],
-    ...commonSliderSettings,
+    ...COMMON_SLIDER_SETTINGS,
     slidesPerView: sliderQuantity,
     centeredSlides: window.innerWidth > 768 ? false : true,
     navigation: {

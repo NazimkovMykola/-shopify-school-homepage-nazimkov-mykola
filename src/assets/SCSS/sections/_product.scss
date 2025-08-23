@@ -58,7 +58,7 @@
     margin-bottom: 0.75rem;
     color: variables.$main-color;
   }
-  .product__details__subtitle {
+  .product__details__price {
     @include mixins.typography-style("body-text-large");
     display: block;
     margin-bottom: 2rem;
@@ -157,7 +157,7 @@
         @include mixins.typography-style("h2-mobile");
         margin-bottom: 0.75rem;
       }
-      .product__details__subtitle {
+      .product__details__price {
         margin-bottom: 1.5rem;
       }
     }
