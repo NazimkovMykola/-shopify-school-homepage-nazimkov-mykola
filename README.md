@@ -42,7 +42,7 @@ http://localhost:5173 - open this link in browser
 
 ## Project Technology Stack
 
-1.Vite: A next-generation frontend tooling that provides a fast and modern development experience. Vite's blazing-fast dev server and optimized build process were key to ensuring efficient development.
+1. Vite: A next-generation frontend tooling that provides a fast and modern development experience. Vite's blazing-fast dev server and optimized build process were key to ensuring efficient development.
 https://vite.dev/
 
 2. SCSS (Sass): A CSS preprocessor that extends the functionality of CSS, allowing for the use of variables, nesting, and mixins. SCSS was used to write more maintainable and organized stylesheets.

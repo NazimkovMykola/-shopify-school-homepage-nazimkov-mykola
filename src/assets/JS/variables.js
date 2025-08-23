@@ -1,6 +1,5 @@
 export const COMMON_SLIDER_SETTINGS = {
   direction: "horizontal",
-  loop: true,
   speed: 1000,
   autoplay: {
     delay: 3000,
