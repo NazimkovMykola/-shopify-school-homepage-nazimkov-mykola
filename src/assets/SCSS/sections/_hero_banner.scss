@@ -45,7 +45,7 @@
     width: 20px;
     height: 6px;
     border-radius: 3px;
-    background: rgba(255, 255, 255, 0.5);
+    background: variables.$white-color;
   }
 
   .swiper-pagination.rectangle .swiper-pagination-bullet-active {
